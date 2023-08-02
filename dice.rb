@@ -1,4 +1,5 @@
 require "sinatra"
+require "sinatra/reloader"
 
 get("/") do
   "Hello World"
@@ -7,8 +8,6 @@ end
 get("/zebra") do
   "We must add a route for each path we want to support"
 end
-
-require "sinatra/reloader"
 
 get("/giraffe") do
   "Hopefully this shows up without having to restart the server :)"
@@ -25,7 +24,7 @@ get("/dice/2/6") do
  <p>#{outcome}</p>"
 end
 
-get("/dice/2/10")" do
+get("/dice/2/10") do
   first_die = rand(11)
   second_die = rand(11)
   sum = first_die + second_die
@@ -58,4 +57,3 @@ get("/dice/5/4") do
   "<h1>5d4</h1>
   <p>#{outcome}</p>"
 end
-
