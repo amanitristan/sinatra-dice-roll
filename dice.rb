@@ -52,7 +52,7 @@ get("/dice/5/4") do
   roll_five = rand(1..4)
   sum = roll_one + roll_two + roll_three + roll_four + roll_five
 
-  outcome = "You rolled a " + roll_one.to_s + ", " + roll_two.to_s + ", " + roll_three.to_s + ", " + roll_four.to_s + ", and " + roll_five.to_s + " for a total of " + outcome.to_s + "."
+  outcome = "You rolled a " + roll_one.to_s + ", " + roll_two.to_s + ", " + roll_three.to_s + ", " + roll_four.to_s + ", and " + roll_five.to_s + " for a total of " + sum.to_s + "."
 
   "<h1>5d4</h1>
   <p>#{outcome}</p>"
