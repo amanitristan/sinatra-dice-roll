@@ -69,6 +69,9 @@ get("/dice/5/4") do
 
   outcome = "You rolled a " + roll_one.to_s + ", " + roll_two.to_s + ", " + roll_three.to_s + ", " + roll_four.to_s + ", and " + roll_five.to_s + " for a total of " + sum.to_s + "."
 
+  #outcome = "You rolled a #{first_die}, a #{second_die}, a #{third_die}, and a #{fourth_die} for a total of #{sum}."
+    #Above is a more efficient version of the outcome variable that I am using. (Would need to adjust to my code.)
+
   "<h1>5d4</h1>
   <p>#{outcome}</p>"
 end
