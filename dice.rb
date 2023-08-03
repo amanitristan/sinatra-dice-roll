@@ -27,7 +27,7 @@ get("/dice/2/6") do
 
   @outcome = "You rolled a " + first_die.to_s + " and a " + second_die.to_s + " for a total of " + sum.to_s + "."
 
-  erb(:two_six)
+  erb(:two_six, {:layout => :wrapper})
 end
 
 get("/dice/2/10") do
@@ -37,7 +37,7 @@ get("/dice/2/10") do
 
   @outcome = "You rolled a " + first_die.to_s + " and a " + second_die.to_s + " for a total of " + sum.to_s + "."
 
-  erb(:two_ten)
+  erb(:two_ten, {:layout => :wrapper})
 end
 
 get("/dice/1/20") do
@@ -45,7 +45,7 @@ get("/dice/1/20") do
 
   @outcome = "You rolled a " + only_roll.to_s + " for a total of " + only_roll.to_s + "."
 
-  erb(:one_twenty)
+  erb(:one_twenty, {:layout => :wrapper})
 end
 
 get("/dice/5/4") do
@@ -61,5 +61,5 @@ get("/dice/5/4") do
   #outcome = "You rolled a #{first_die}, a #{second_die}, a #{third_die}, and a #{fourth_die} for a total of #{sum}."
     #Above is a more efficient version of the outcome variable that I am using. (Would need to adjust to my code.)
 
-  erb(:five_four)
+  erb(:five_four, {:layout => :wrapper})
 end
